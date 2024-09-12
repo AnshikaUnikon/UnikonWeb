@@ -20,15 +20,9 @@ class LoginPage
         cy.get('input[placeholder="Enter Phone Number"]').type(mobileno)
     }
 
-    setOtp()
+    setOtp(otp)
     {
-        cy.get('input[aria-label="Please enter OTP character 1"]').type("1")
-
-        cy.get('input[aria-label="Please enter OTP character 2"]').type("1")
-
-        cy.get('input[aria-label="Please enter OTP character 3"]').type("1")
-        
-        cy.get('input[aria-label="Please enter OTP character 4"]').type("1")       
+        cy.get('input[aria-label="Please enter OTP character 1"]').type(otp) 
     }
 
     clickContinueBtn(continuebtn)
@@ -41,4 +35,4 @@ class LoginPage
         cy.get('input[placeholder="Enter Phone Number"]').should('have.text', '')
     }
 }
-export default Login;
+export default LoginPage;

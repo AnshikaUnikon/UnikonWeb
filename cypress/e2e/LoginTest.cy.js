@@ -6,12 +6,12 @@ describe('LoginAppTest', () =>
   
     it('LoginMobile', () => 
         {
-            const ln=new Login();
+            const ln=new LoginPage();
             ln.openUnikon();
             ln.profileTab();
             ln.setMobileNo("9897123456")
             ln.clickContinueBtn();
-            ln.setOtp();
+            ln.setOtp("1111");
         })
     
 })
